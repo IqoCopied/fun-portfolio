@@ -13,12 +13,18 @@ const fog = VANTA.FOG({
   speed: 1.5
 })
 
-$('.click').on('mousedown touchstart', function(settings) {
+
+$('.click').on('mousedown', function(settings) {
   $('.click-text').addClass('click-text-min')
-  fog.setOptions( { 
+  fog.setOptions({
     speed: 8
   })
-  setTimeout(() => {
-    window.location.href = 'https://youtube.com';
-  }, 71 * 10)
+  timeoutId = setTimeout(() => {
+    window.location.href = 'https://youtube.com'
+  }, 710)
+}).on('mouseup mouseleave', function() {
+  clearTimeout(timeoutId);
+  fog.setOptions({
+    speed: 1.5
+  })
 })
