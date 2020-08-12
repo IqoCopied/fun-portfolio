@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  background: #000;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.triangles {
+  display: flex;
+  width: 146px;
+  height: 30px;
+  margin: 30px auto;
+}
+.left {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 28px solid #EF4F38;
+  border-bottom: 15px solid transparent;
+}
+.left:active {
+  border-right-color: #BF3825;
+}
+.right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 28px solid #EF4F38;
+  border-bottom: 15px solid transparent;
+}
+.right:active {
+  border-left-color: #BF3825;
+}
+.top {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 28px solid #EF4F38;
+}
+.top:active {
+  border-bottom-color: #BF3825;
+}
+.bottom {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 28px solid #EF4F38;
+}
+.bottom:active {
+  border-top-color: #BF3825;
+}
+.button {
+  transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) .1s;
+}
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.button:active {
+  cursor: default;
+  transform: scale(1);
+}
+.hide {
+  display: none;
+}
+
+
+.vanta-fog {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.title {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-text {
+  color: #fff;
+  font-size: 25px;
+  opacity: .8;
+  text-align: center;
+  margin-bottom: 30px;
+  -webkit-user-select: none;
+}
+.click {
+  position: absolute;
+  margin-top: 47vh;
+}
+.click-text {
+  color: #fff;
+  font-size: 14px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity ease-in-out .3s, font-size ease-in-out .2s;
+}
+.click-text:hover {
+  opacity: 1;
+}
+.click-text-min {
+  font-size: 12.5px;
+}
